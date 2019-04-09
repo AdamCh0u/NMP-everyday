@@ -31,6 +31,3 @@ network_colors = pd.Series(networks, index=df.columns).map(network_lut)
 sns.clustermap(df.corr(), center=0, cmap="vlag",
 row_colors=network_colors, col_colors=network_colors,
 linewidths=.75, figsize=(13, 13))
-
-#%%[markdown]
-## 就最后一步
