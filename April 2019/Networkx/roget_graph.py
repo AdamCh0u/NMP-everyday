@@ -44,7 +44,7 @@ if __name__ == '__main__':
     G = roget_graph()
     print("Loaded roget_dat.txt containing 1022 categories.")
     print("digraph has %d nodes with %d edges"
-          % (nx.number_of_nodes(G), nx.number_of_edges(G)))
+        % (nx.number_of_nodes(G), nx.number_of_edges(G)))
     UG = G.to_undirected()
     print(nx.number_connected_components(UG), "connected components")
 
@@ -55,5 +55,5 @@ if __name__ == '__main__':
         'linewidths': 0,
         'width': 0.1,
     }
-    nx.draw_graphviz(UG, **options)
+    nx.draw(UG, **options)
     plt.show()
